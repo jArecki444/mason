@@ -14,7 +14,6 @@ class {{name.pascalCase()}}DetailsResponse
     required String firstName,
     required String lastName,
     required String email,
-    required UserRoleEnum role,
     String? phoneNumber,
   }) = _{{name.pascalCase()}}DetailsResponse;
 

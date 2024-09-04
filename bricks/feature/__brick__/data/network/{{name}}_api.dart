@@ -1,6 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
+
+import 'dto/{{name}}_details_response/{{name}}_details_response.dart';
+import 'dto/update_{{name}}_request_body/update_{{name}}_request_body.dart';
+
 part '{{name}}_api.g.dart';
 
 @RestApi()
