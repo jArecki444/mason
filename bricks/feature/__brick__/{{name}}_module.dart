@@ -7,7 +7,7 @@ import 'domain/repository/{{name}}_repository.dart';
 
 @module
 abstract class {{name.pascalCase()}}Module {
-  @LazySingleton(as: {{name.pascalCase()}}Repository)
+  @LazySingleton(as: Api{{name.pascalCase()}}Repository)
   RestApi{{name.pascalCase()}}Repository get api{{name.pascalCase()}}Repository;
 
   @lazySingleton

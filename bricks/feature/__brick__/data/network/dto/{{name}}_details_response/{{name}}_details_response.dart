@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../domain/entity/{{name}}_details_entity.dart';
+
 part '{{name}}_details_response.freezed.dart';
 part '{{name}}_details_response.g.dart';
 

@@ -7,12 +7,15 @@ class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
     /// Indicates the current status of the page to
     /// display the appropriate content for entire page
     /// to use it in bloc builder
-    @Default({{name.pascalCase()}}PageStatus.initialized())   
+    @Default({{name.pascalCase()}}PageStatus.loading())   
     final {{name.pascalCase()}}PageStatus pageStatus,
 
     // Indicates that we should handle some action result in bloc listener
     // like navigation to next screen or showing error message
     final ActionResultToHandle? actionResultToHandle,
+
+    /// Fetched data from the API mapped to the entity
+    final {{name.pascalCase()}}DetailsEntity? fetchedData,
 
   }) = _{{name.pascalCase()}}State;
 }

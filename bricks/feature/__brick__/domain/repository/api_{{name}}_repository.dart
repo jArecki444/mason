@@ -1,5 +1,7 @@
 import 'entity/{{name}}_entity.dart';
 
+import '../../data/network/dto/update_{{name}}_request_body/update_{{name}}_request_body.dart';
+import '../entity/{{name}}_details_entity.dart';
 
 abstract class Api{{name.pascalCase()}}Repository {
   /// The method allows you to fetch details of the {{name}}.
