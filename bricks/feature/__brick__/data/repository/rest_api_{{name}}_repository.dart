@@ -1,0 +1,37 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'package:retrofit/dio.dart';
+import 'package:rxdart/rxdart.dart';
+
+class RestApi{{name.pascalCase()}}Repository implements Api{{name.pascalCase()}}Repository {
+  final {{name.pascalCase()}}Api _{{name}}Api;
+
+  RestApi{{name.pascalCase()}}Repository(this._{{name}}Api);
+
+  @override
+  Future<Result<{{name.pascalCase()}}DetailsEntity, CommonRequestError>>
+      fetch{{name.pascalCase()}}Details() async {
+    try {
+      final {{name.pascalCase()}}DetailsResponse response =
+          await _{{name}}Api.getMy{{name.pascalCase()}}Details();
+
+      final {{name.pascalCase()}}DetailsEntity {{name}}DetailsEntity = response.toEntity();
+
+      return Result.success(data: {{name}}DetailsEntity);
+    } on DioException catch (e) {
+      // catch network connection lost error
+      if (e.error is SocketException) {
+        return const Result.failure(
+          error: CommonRequestError.connectionLost(),
+        );
+      } else {
+        // catch undefined problem like 500 server error
+        return const Result.failure(
+          error: CommonRequestError.undefinedProblem(),
+        );
+      }
+    }
+  }
+}
