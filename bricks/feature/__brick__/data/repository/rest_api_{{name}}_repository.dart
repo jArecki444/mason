@@ -1,16 +1,12 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-import 'package:retrofit/dio.dart';
-import 'package:rxdart/rxdart.dart';
 
 import '../../domain/entity/{{name}}_details_entity.dart';
 import '../../domain/repository/api_{{name}}_repository.dart';
 import '../network/dto/{{name}}_details_response/{{name}}_details_response.dart';
+import '../network/dto/update_{{name}}_request_body/update_{{name}}_request_body.dart';
 import '../network/{{name}}_api.dart';
-
-
 
 class RestApi{{name.pascalCase()}}Repository implements Api{{name.pascalCase()}}Repository {
   final {{name.pascalCase()}}Api _{{name}}Api;

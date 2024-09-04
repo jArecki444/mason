@@ -1,3 +1,7 @@
+# 0.1.0+4
+
+- Fixed some imports
+  
 # 0.1.0+3
 
 - Added sample implementation of the PUT method to update object details
