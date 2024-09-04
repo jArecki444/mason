@@ -41,11 +41,43 @@ class {{name.pascalCase()}}Body extends StatelessWidget {
 
                   // SHOW LOGIN FORM
                   initialized: () {
-                    return Placeholder(
-                      child: Text('TODO: implement {{name.pascalCase()}} page'),
-                    );
-                  },
-                );
+                  return Scaffold(
+              backgroundColor: AppPalette.backgroundPrimary,
+              appBar: CommonAppBar.backNavigationIconWithTitle(
+                label: '{{name.pascalCase()}}',
+              ),
+              body: LayoutBuilder(
+                builder: (context, constraint) {
+                  // LayoutBuilder, ConstrainedBox & IntrinsicHeight are used
+                  // to fix issue with spacer inside singleChildScrollView
+                  return SingleChildScrollView(
+                    child: ConstrainedBox(
+                      constraints:
+                          BoxConstraints(minHeight: constraint.maxHeight),
+                      child: IntrinsicHeight(
+                        child: SafeArea(
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('TODO: {{name.pascalCase()}} Body'),
+                                Spacer(),
+                                Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit... '),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            );
+          },
+        );
       },
     );
   }
