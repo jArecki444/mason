@@ -6,11 +6,11 @@ part '{{name}}_details_entity.freezed.dart';
 // This will allow you to have a consistent data structure across the app.
 
 @freezed
-class {{name.pascaCase()}}DetailsEntity with _${{name.pascaCase()}}DetailsEntity {
-  factory {{name.pascaCase()}}DetailsEntity({
+class {{name.pascalCase()}}DetailsEntity with _${{name.pascalCase()}}DetailsEntity {
+  factory {{name.pascalCase()}}DetailsEntity({
     required int id,
     required String firstName,
     required String lastName,
     required String email,
-  }) = _{{name.pascaCase()}}DetailsEntity;
+  }) = _{{name.pascalCase()}}DetailsEntity;
 }
