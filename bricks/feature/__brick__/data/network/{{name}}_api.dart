@@ -13,7 +13,7 @@ abstract class {{name.pascalCase()}}Api {
   factory {{name.pascalCase()}}Api(Dio dio) = _{{name.pascalCase()}}Api;
 
   @GET({{name}}ApiPath)
-  Future<{{name.pascalCase()}}DetailsResponse> getMy{{name.pascalCase()}}Details();
+  Future<{{name.pascalCase()}}DetailsResponse> get{{name.pascalCase()}}Details();
 
   @PUT('${{name}}ApiPath/TODO: Add your REST API path here')
   Future<{{name.pascalCase()}}DetailsResponse> update{{name.pascalCase()}}(

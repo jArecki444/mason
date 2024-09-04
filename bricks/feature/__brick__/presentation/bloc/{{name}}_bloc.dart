@@ -16,7 +16,7 @@ class {{name.pascalCase()}}Bloc
   final Api{{name.pascalCase()}}Repository _api{{name.pascalCase()}}Repository;
 
   {{name.pascalCase()}}Bloc(
-    this._api{{name}}Repository,
+    this._api{{name.pascalCase()}}Repository,
   ) : super(const {{name.pascalCase()}}State()) {
     on<EnteredPage{{name.pascalCase()}}Event>(_onEnteredPage);
     //TODO: Uncomment this line if you want to handle the submit button press
@@ -27,7 +27,7 @@ class {{name.pascalCase()}}Bloc
     EnteredPage{{name.pascalCase()}}Event event,
     Emitter<{{name.pascalCase()}}State> emit,
   ) async {
-    final result = await _api{{name.pascalCase()}}Repository.fetchDetails();
+    final result = await _api{{name.pascalCase()}}Repository.fetch{{name.pascalCase()}}Details();
 
     emit(
       result.when(
