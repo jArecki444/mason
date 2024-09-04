@@ -56,7 +56,7 @@ class {{name.pascalCase()}}Bloc
   //       failure: (error) => error.when(
   //         connectionLost: () => state.copyWith(
   //           pageStatus:
-  //               const {{name.pascalCase()}}PageStatus.networkConnectionLost(),
+  //               {{name.pascalCase()}}PageStatus.networkConnectionLost(event),
   //         ),
   //         undefinedProblem: () => state.copyWith(
   //           pageStatus:
