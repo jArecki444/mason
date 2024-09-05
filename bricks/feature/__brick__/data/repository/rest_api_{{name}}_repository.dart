@@ -43,13 +43,13 @@ class RestApi{{name.pascalCase()}}Repository implements Api{{name.pascalCase()}}
     required Update{{name.pascalCase()}}RequestBody update{{name.pascalCase()}}RequestBody,
   }) async {
     try {
-      final {{name.pascalCase()}}DetailsResponse response = await _testApi.update{{name.pascalCase()}}(
+      final {{name.pascalCase()}}DetailsResponse response = await _{{name}}Api.update{{name.pascalCase()}}(
         update{{name.pascalCase()}}RequestBody,
       );
 
-      final {{name.pascalCase()}}DetailsEntity testDetailsEntity = response.toEntity();
+      final {{name.pascalCase()}}DetailsEntity {{name}}DetailsEntity = response.toEntity();
 
-      return Result.success(data: testDetailsEntity);
+      return Result.success(data: {{name}}DetailsEntity);
     } on DioException catch (e) {
       // catch network connection lost error
       if (e.error is SocketException) {
