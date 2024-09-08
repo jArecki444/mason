@@ -39,7 +39,7 @@ class {{name.pascalCase()}}Body extends StatelessWidget {
                     },
                   ),
 
-                  // SHOW LOGIN FORM
+                  // SHOW PAGE CONTENT
                   initialized: () {
                   return Scaffold(
               backgroundColor: AppPalette.backgroundPrimary,

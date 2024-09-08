@@ -1,3 +1,7 @@
+# 0.1.0+6
+
+- Changed misleading comment
+
 # 0.1.0+5
 
 - Fixed rest api repository generation
