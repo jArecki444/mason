@@ -1,3 +1,7 @@
+# 0.1.0+7
+
+- Upgrade mason cli version
+  
 # 0.1.0+6
 
 - Changed misleading comment

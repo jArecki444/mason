@@ -1,3 +1,7 @@
+# 0.1.0+2
+
+- upgrade mason cli version
+
 # 0.1.0+1
 
-- TODO: Describe initial release.
+- initial release of bloc brick
