@@ -39,7 +39,7 @@ class {{name.pascalCase()}}Body extends StatelessWidget {
                     },
                   ),
 
-                  // SHOW LOGIN FORM
+                  // SHOW INITIALIZED PAGE
                   initialized: () {
                     return Placeholder(
                       child: Text('TODO: implement {{name.pascalCase()}} page'),

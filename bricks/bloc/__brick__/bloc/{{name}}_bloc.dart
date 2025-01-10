@@ -10,11 +10,9 @@ part '{{name}}_state.dart';
 class {{name.pascalCase()}}Bloc
     extends Bloc<{{name.pascalCase()}}Event, {{name.pascalCase()}}State> {
   
-  //TODO: Change it to your repository to call the api
-  //final {{name.pascalCase()}}Repository _{{name.pascalCase()}}Repository;
+  //TODO: Add repository to call the api if needed
 
   {{name.pascalCase()}}Bloc(
-    //this._{{name}}Repository,
   ) : super(const {{name.pascalCase()}}State()) {
     on<EnteredPage{{name.pascalCase()}}Event>(_onEnteredPage);
     //TODO: Uncomment this line if you want to handle the submit button press

@@ -1,3 +1,7 @@
+# 0.1.0+3
+
+- added post generation script & updated code comments
+
 # 0.1.0+2
 
 - upgrade mason cli version
