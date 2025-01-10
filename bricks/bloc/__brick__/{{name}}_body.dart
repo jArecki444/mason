@@ -30,10 +30,17 @@ class {{name.pascalCase()}}Body extends StatelessWidget {
                   unexpectedServerError: () => CommonUnknownServerErrorPage(
                     onSuggestionPressed: () => GoRouter.of(context).pop(),
                     buttonSuggestionText: LocaleKeys.common_goBack.tr(),
+                    title: LocaleKeys.errors_errorOccurred.tr(),
+                    description: LocaleKeys.errors_somethingWentWrong.tr(),
+                    imageAsset: ImageAssets.errorImages.warningIcon,
                   ),
 
                   // SHOW OFFLINE MODE PAGE
                   networkConnectionLost: (lastEventToRetry) => CommonOfflineModePage(
+                    imageAsset: ImageAssets.errorImages.connectionLost,
+                    title: LocaleKeys.errors_errorOccurred.tr(),
+                    description: LocaleKeys.errors_offline.tr(),
+                    submitButtonText: LocaleKeys.common_tryAgain.tr(),
                     onTryAgainPressed: () {
                       context.read<{{name.pascalCase()}}Bloc>().add(lastEventToRetry);
                     },

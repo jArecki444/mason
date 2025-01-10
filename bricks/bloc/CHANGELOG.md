@@ -1,3 +1,7 @@
+# 0.1.0+6
+
+- updated used params for CommonUnknownServerErrorPage & CommonOfflineModePage
+  
 # 0.1.0+5
 
 - removed post generation script
