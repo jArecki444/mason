@@ -1,3 +1,7 @@
+# 0.1.0+5
+
+- removed post generation script
+
 # 0.1.0+4
 
 - updated post generation script
