@@ -1,3 +1,7 @@
+# 0.1.0+4
+
+- updated post generation script
+
 # 0.1.0+3
 
 - added post generation script & updated code comments
