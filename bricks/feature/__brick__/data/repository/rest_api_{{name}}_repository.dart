@@ -9,20 +9,20 @@ import '../network/dto/update_{{name}}_request_body/update_{{name}}_request_body
 import '../network/{{name}}_api.dart';
 
 class RestApi{{name.pascalCase()}}Repository implements Api{{name.pascalCase()}}Repository {
-  final {{name.pascalCase()}}Api _{{name}}Api;
+  final {{name.pascalCase()}}Api _{{name.camelCase()}}Api;
 
-  RestApi{{name.pascalCase()}}Repository(this._{{name}}Api);
+  RestApi{{name.pascalCase()}}Repository(this._{{name.camelCase()}}Api);
 
   @override
   Future<Result<{{name.pascalCase()}}DetailsEntity, CommonRequestError>>
       fetch{{name.pascalCase()}}Details() async {
     try {
       final {{name.pascalCase()}}DetailsResponse response =
-          await _{{name}}Api.get{{name.pascalCase()}}Details();
+          await _{{name.camelCase()}}Api.get{{name.pascalCase()}}Details();
 
-      final {{name.pascalCase()}}DetailsEntity {{name}}DetailsEntity = response.toEntity();
+      final {{name.pascalCase()}}DetailsEntity {{name.camelCase()}}DetailsEntity = response.toEntity();
 
-      return Result.success(data: {{name}}DetailsEntity);
+      return Result.success(data: {{name.camelCase()}}DetailsEntity);
     } on DioException catch (e) {
       // catch network connection lost error
       if (e.error is SocketException) {
@@ -43,13 +43,13 @@ class RestApi{{name.pascalCase()}}Repository implements Api{{name.pascalCase()}}
     required Update{{name.pascalCase()}}RequestBody update{{name.pascalCase()}}RequestBody,
   }) async {
     try {
-      final {{name.pascalCase()}}DetailsResponse response = await _{{name}}Api.update{{name.pascalCase()}}(
+      final {{name.pascalCase()}}DetailsResponse response = await _{{name.camelCase()}}Api.update{{name.pascalCase()}}(
         update{{name.pascalCase()}}RequestBody,
       );
 
-      final {{name.pascalCase()}}DetailsEntity {{name}}DetailsEntity = response.toEntity();
+      final {{name.pascalCase()}}DetailsEntity {{name.camelCase()}}DetailsEntity = response.toEntity();
 
-      return Result.success(data: {{name}}DetailsEntity);
+      return Result.success(data: {{name.camelCase()}}DetailsEntity);
     } on DioException catch (e) {
       // catch network connection lost error
       if (e.error is SocketException) {

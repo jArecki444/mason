@@ -8,14 +8,14 @@ part '{{name}}_api.g.dart';
 
 @RestApi()
 abstract class {{name.pascalCase()}}Api {
-  static const String {{name}}ApiPath = 'TODO: Add your REST API path here';
+  static const String {{name.camelCase()}}ApiPath = 'TODO: Add your REST API path here';
 
   factory {{name.pascalCase()}}Api(Dio dio) = _{{name.pascalCase()}}Api;
 
-  @GET({{name}}ApiPath)
+  @GET({{name.camelCase()}}ApiPath)
   Future<{{name.pascalCase()}}DetailsResponse> get{{name.pascalCase()}}Details();
 
-  @PUT('${{name}}ApiPath/TODO: Add your REST API path here')
+  @PUT('${{name.camelCase()}}ApiPath/TODO: Add your REST API path here')
   Future<{{name.pascalCase()}}DetailsResponse> update{{name.pascalCase()}}(
     @Body() Update{{name.pascalCase()}}RequestBody body,
   );
