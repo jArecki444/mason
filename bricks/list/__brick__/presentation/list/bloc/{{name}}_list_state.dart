@@ -39,7 +39,7 @@ class {{name.pascalCase()}}ListPageStatus with _${{name.pascalCase()}}ListPageSt
   /// The user should check the network connection and try again.
   /// It persists last event to handle it after network connection is back
   const factory {{name.pascalCase()}}ListPageStatus.networkConnectionLost(
-    {{name.pascalCase()}}Event lastEventToRetry,
+    {{name.pascalCase()}}ListEvent lastEventToRetry,
   ) = _{{name.pascalCase()}}NetworkConnectionLostPageStatus;
 
   /// It reflects that we received empty data from the server and 

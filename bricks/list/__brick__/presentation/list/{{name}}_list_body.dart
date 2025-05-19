@@ -34,7 +34,7 @@ class _{{name.pascalCase()}}ListBodyState extends State<{{name.pascalCase()}}Lis
     return BlocConsumer<{{name.pascalCase()}}ListBloc, {{name.pascalCase()}}ListState>(
       listener: (context, state) {
         state.actionResultToHandle?.when(
-          navigateToDetails: (itemId) {
+          navigateToDetailsPage: (itemId) {
             //TODO: add navigation to details page if needed
             print('Navigate to details page with itemId: $itemId');
           },
@@ -68,11 +68,11 @@ class _{{name.pascalCase()}}ListBodyState extends State<{{name.pascalCase()}}Lis
 
                   // SHOW EMPTY DATA PAGE
                   //TODO: replace it with your own page for empty data 
-                  emptyData: () => CommonUnexpectedServerErrorPage(
+                  emptyData: () => CommonUnknownServerErrorPage(
                     onSuggestionPressed: () => GoRouter.of(context).pop(),
                     buttonSuggestionText: LocaleKeys.common_goBack.tr(),
-                    title: LocaleKeys.errors_noData.tr(),
-                    description: LocaleKeys.errors_noDataDescription.tr(),
+                    title: 'No data available',
+                    description: 'Sorry, the list of {{name.pascalCase()}} is empty.',
                     imageAsset: ImageAssets.errorImages.emptyState,
                   ),
 
@@ -107,8 +107,8 @@ class _{{name.pascalCase()}}ListBodyState extends State<{{name.pascalCase()}}Lis
                             title: Text('ID: ${item.id}'),
                             subtitle: Text('Created at: ${item.createdAt}'),
                             onTap: () {
-                              context.read<{{name.pascalCase()}}Bloc>().add(
-                                {{name.pascalCase()}}Event.pressedOn{{name.pascalCase()}}ListItem(itemId: item.id),
+                              context.read<{{name.pascalCase()}}ListBloc>().add(
+                                {{name.pascalCase()}}ListEvent.pressedOn{{name.pascalCase()}}ListItem(item),
                               );
                             },
                           );

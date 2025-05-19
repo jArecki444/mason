@@ -4,7 +4,7 @@ part of '{{name}}_list_bloc.dart';
 class {{name.pascalCase()}}ListEvent with _${{name.pascalCase()}}ListEvent {
   /// This event is responding to the user entering the page.
   /// It will be used to initialize the state of the page.
-  const factory {{name.pascalCase()}}Event.enteredPage(
+  const factory {{name.pascalCase()}}ListEvent.enteredPage(
   ) = EnteredPage{{name.pascalCase()}}ListEvent;
 
   /// This event is responding to the user scrolling to the bottom of the list.

@@ -2,7 +2,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../domain/repository/api_{{name}}_repository.dart';
+import '../../../data/network/dto/{{name}}_list_response/{{name}}_list_item.dart';
+import '../../../domain/repository/api_{{name}}_repository.dart';
 
 part '{{name}}_list_bloc.freezed.dart';
 part '{{name}}_list_event.dart';
@@ -50,11 +51,11 @@ class {{name.pascalCase()}}ListBloc
       result.when(
         success: (data) {
           return state.copyWith(
-            pageStatus: data == null || data.isEmpty
+            pageStatus: data == null || data.content.isEmpty
                 ? const {{name.pascalCase()}}ListPageStatus.emptyData()
                 : const {{name.pascalCase()}}ListPageStatus.initialized(),
             actionResultToHandle: null,
-            fetchedData: data,
+            fetchedListItems: data == null ? [] : List<{{name.pascalCase()}}ListItem>.from(data.content),
           );
         },
         failure: (error) => error.when(
@@ -106,10 +107,12 @@ class {{name.pascalCase()}}ListBloc
     emit(
       result.when(
         success: (data) {
+          List<{{name.pascalCase()}}ListItem> fetchedItems = List.from(data!.content);
+
           return state.copyWith(
             pageStatus: const {{name.pascalCase()}}ListPageStatus.initialized(),
             actionResultToHandle: null,
-            fetchedData: []
+            fetchedListItems: [...state.fetchedListItems, ...fetchedItems],
             pageIndex: state.pageIndex + 1,
             hasFetchedAll: !data.hasNext,
             isLoadingMore: false,
