@@ -1,1 +1,13 @@
-{"bricks":{"bloc":{"path":"/Users/arkadiuszcichurski/repos/mason/bricks/bloc"},"feature":{"path":"/Users/arkadiuszcichurski/repos/mason/bricks/feature"}}}
+{
+    "bricks": {
+        "bloc": {
+            "path": "/Users/arkadiuszcichurski/repos/mason/bricks/bloc"
+        },
+        "feature": {
+            "path": "/Users/arkadiuszcichurski/repos/mason/bricks/feature"
+        },
+        "list": {
+            "path": "/Users/arkadiuszcichurski/repos/mason/bricks/list"
+        }
+    }
+}

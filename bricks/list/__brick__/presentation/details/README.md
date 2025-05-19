@@ -1,0 +1,1 @@
+If you need to create details page do it from this nesting level of this readme file.

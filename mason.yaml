@@ -19,3 +19,6 @@ bricks:
   feature:
     path: 
       bricks/feature
+  list:
+    path: 
+      bricks/list
