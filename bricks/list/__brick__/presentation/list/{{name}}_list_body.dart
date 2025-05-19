@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../data/network/dto/{{name}}_list_response/{{name}}_list_item.dart';
 import 'bloc/{{name}}_list_bloc.dart';
 
 class {{name.pascalCase()}}ListBody extends StatefulWidget {
@@ -62,7 +63,7 @@ class _{{name.pascalCase()}}ListBodyState extends State<{{name.pascalCase()}}Lis
                     description: LocaleKeys.errors_offline.tr(),
                     submitButtonText: LocaleKeys.common_tryAgain.tr(),
                     onTryAgainPressed: () {
-                      context.read<{{name.pascalCase()}}Bloc>().add(lastEventToRetry);
+                      context.read<{{name.pascalCase()}}ListBloc>().add(lastEventToRetry);
                     },
                   ),
 
@@ -73,7 +74,7 @@ class _{{name.pascalCase()}}ListBodyState extends State<{{name.pascalCase()}}Lis
                     buttonSuggestionText: LocaleKeys.common_goBack.tr(),
                     title: 'No data available',
                     description: 'Sorry, the list of {{name.pascalCase()}} is empty.',
-                    imageAsset: ImageAssets.errorImages.emptyState,
+                    imageAsset: ImageAssets.errorImages.warningIcon,
                   ),
 
                   // SHOW PAGE CONTENT
