@@ -1,3 +1,7 @@
+# 0.1.0+9
+
+- Refactor of the naming in module.dart file 
+
 # 0.1.0+8
 
 - Upgrade mason cli version

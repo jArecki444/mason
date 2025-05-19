@@ -11,5 +11,5 @@ abstract class {{name.pascalCase()}}Module {
   RestApi{{name.pascalCase()}}Repository get api{{name.pascalCase()}}Repository;
 
   @lazySingleton
-  {{name.pascalCase()}}Api get {{name}}Api => {{name.pascalCase()}}Api(inject<Dio>());
+  {{name.pascalCase()}}Api get api{{name.pascalCase()}} => {{name.pascalCase()}}Api(inject<Dio>());
 }
