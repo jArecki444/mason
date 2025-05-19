@@ -1,4 +1,3 @@
-mason-lock.json
 .mason/bricks.json
 
 # Using test directory for creating test bricks before publishing

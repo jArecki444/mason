@@ -19,7 +19,3 @@ bricks:
   feature:
     path: 
       bricks/feature
-  example:
-    path: 
-      bricks/example
-    
